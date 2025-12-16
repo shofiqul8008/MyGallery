@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=2.0, user-scalable=yes">
+  <title>My Gallery - Image Collection</title>
+  <meta name="description" content="A beautiful masonry image gallery with smooth animations and dark mode">
+  <meta name="author" content="shofiqul8008@outlook.com">
+  <link rel="stylesheet" href="style.css">
+  
+  
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="menu-container">
+      <a href="#" class="logo" data-page="home">
+       ¦
+        My<span>Gallery</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav id="mainNav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" data-page="home">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-page="contact">
+              Contact
+            </a>
+          </li>
+          <li class="nav-item">
+            <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+              <div class="toggle-switch"></div>
+              <span class="toggle-label">Dark Mode</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- Mobile Menu Button (Hamburger) -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Slideout Menu - Initially Hidden -->
+  <div class="mobile-slideout" id="mobileSlideout">
+    <div class="mobile-nav-header">
+      <div class="mobile-nav-title">
+        
+        Menu
+      </div>
+      <button class="mobile-close-btn" id="mobileCloseBtn">&times;</button>
+    </div>
+    
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link active" data-page="home">
+          <span class="mobile-nav-icon">H</span>
+          <span>Home Gallery</span>
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link" data-page="contact">
+          <span class="mobile-nav-icon">C</span>
+          <span>Contact Me</span>
+        </a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="#" class="mobile-nav-link" data-page="about">
+          <span class="mobile-nav-icon">A</span>
+          <span>About Project</span>
+        </a>
+      </li>
+    </ul>
+    
+    <!-- Mobile Dark Mode Toggle -->
+    <button class="mobile-dark-toggle" id="mobileDarkToggle">
+      <div class="mobile-dark-text">
+        <span class="mobile-dark-icon">D</span>
+        <span>Dark Mode</span>
+      </div>
+      <div class="mobile-dark-switch"></div>
+    </button>
+  </div>
+
+  <!-- Image Gallery -->
+  <main class="gallery-container" id="gallery">
+    <!-- Images will be loaded here -->
+    <div class="image-loading" style="height: 200px;"></div>
+    <div class="image-loading" style="height: 250px;"></div>
+    <div class="image-loading" style="height: 180px;"></div>
+    <div class="image-loading" style="height: 300px;"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>Designed & Developed by <a href="mailto:shofiqul8008@outlook.com" class="footer-email">Email</a></p>
+      <p class="copyright">My Gallery &copy; <span id="currentYear">2025</span> | All images are copyright free</p>
+    </div>
+  </footer>
+
+  <!-- Image Modal -->
+  <div class="modal" id="imageModal">
+    <div class="modal-content">
+      <img class="modal-img" id="modalImage" alt="Full size image">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-nav">
+        <button class="modal-btn" id="prevBtn">←</button>
+        <button class="modal-btn" id="nextBtn">→</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="node.js"> </script>
+</body>
+</html>
